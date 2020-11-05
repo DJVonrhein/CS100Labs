@@ -48,22 +48,22 @@ TEST(OpTest, OpEvaluateMockNeg){
 
 TEST(OpTest, OpStringifyPos) {
     Op* test = new Op(8);
-    EXPECT_EQ(test->stringify(), "8");
+    EXPECT_EQ(test->stringify(), "8.000000");
 }
 
 TEST(OpTest, OpStringifyZero) {
     Op* test = new Op(0);
-    EXPECT_EQ(test->stringify(), "0");
+    EXPECT_EQ(test->stringify(), "0.000000");
 }
 
 TEST(OpTest, OpStringifyNeg) {
     Op* test = new Op(-5);
-    EXPECT_EQ(test->stringify(), "-5");
+    EXPECT_EQ(test->stringify(), "-5.000000");
 }
 
 TEST(OpTest, OpStringifyPosDouble) {
     Op* test = new Op(3.5);
-    EXPECT_EQ(test->stringify(), "3.5");
+    EXPECT_EQ(test->stringify(), "3.500000");
 }
 
 TEST(OpTest, OpMockStringifyPos) {
