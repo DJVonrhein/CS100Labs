@@ -10,7 +10,7 @@ ADD_EXECUTABLE(test
 )
 
 #ADD_EXECUTABLE(op_test
-#   op_test.cpp
+#   op_test.hpp
 #)
 
 TARGET_LINK_LIBRARIES(test gtest)
