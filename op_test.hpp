@@ -17,7 +17,7 @@ TEST(OpTest, OpEvaluateZero) {
 
 TEST(OpTest, OpEvaluateNeg) {
     Op* test = new Op(-5);
-    EXPECT_EQ(test->evaluate(), -5)
+    EXPECT_EQ(test->evaluate(), -5);
 }
 
 TEST(OpTest, OpEvaluatePosDouble) {
@@ -31,17 +31,17 @@ TEST(OpTest, OpEvaluateNegDouble) {
 }
 
 TEST(OpTest, OpEvaluateMockPos){
-    Op* test= new SevenOpMock();
+    SevenOpMock* test= new SevenOpMock();
     EXPECT_EQ(test->evaluate(), 7.5);
 }
 
 TEST(OpTest, OpEvaluateMockZero){
-    Op* test= new ZeroOpMock();
+    ZeroOpMock* test= new ZeroOpMock();
     EXPECT_EQ(test->evaluate(), 0.0);
 }
 
 TEST(OpTest, OpEvaluateMockNeg){
-    Op* test= new NegOpMock();
+    NegOpMock* test= new NegOpMock();
     EXPECT_EQ(test->evaluate(), -1.0);
 }
 
@@ -58,7 +58,7 @@ TEST(OpTest, OpStringifyZero) {
 
 TEST(OpTest, OpStringifyNeg) {
     Op* test = new Op(-5);
-    EXPECT_EQ(test->stringify(), "-5")
+    EXPECT_EQ(test->stringify(), "-5");
 }
 
 TEST(OpTest, OpStringifyPosDouble) {
@@ -67,18 +67,18 @@ TEST(OpTest, OpStringifyPosDouble) {
 }
 
 TEST(OpTest, OpMockStringifyPos) {
-    Op* test = new Op();
+    SevenOpMock* test = new SevenOpMock();
     EXPECT_EQ(test->stringify(), "7.5");
 }
 
 TEST(OpTest, OpMockStringifyZero) {
-    Op* test = new ZeroOpMock();
+    ZeroOpMock* test = new ZeroOpMock();
     EXPECT_EQ(test->stringify(), "0.0");
 }
 
 TEST(OpTest, OpMockStringifyNeg) {
-    Op* test = new NegOpMock();
-    EXPECT_EQ(test->stringify(), "-1.0")
+    NegOpMock* test = new NegOpMock();
+    EXPECT_EQ(test->stringify(), "-1.0");
 }
 
 
