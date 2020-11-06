@@ -12,7 +12,9 @@ class Mult : public Base {
 	private:
 		Base* lhs;
 		Base* rhs;
+
 };
 
 #endif
+
 
