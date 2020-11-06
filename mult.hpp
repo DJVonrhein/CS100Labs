@@ -1,5 +1,5 @@
-#ifndef __DIV_HPP__
-#define __DIV_HPP__
+#ifndef __MULT_HPP__
+#define __MULT_HPP__
 
 #include "base.hpp"
 #include "op.hpp"
@@ -13,3 +13,5 @@ class Mult : public Base {
 		Base* lhs;
 		Base* rhs;
 }
+
+#endif
