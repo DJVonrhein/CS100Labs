@@ -4,11 +4,11 @@
 #include "base.hpp"
 #include <cmath>
 
-class Sub : public Base {
+class Pow : public Base {
     public:
-        Sub(Base* l, Base* r) : Base() {lhs = l; rhs = r }
+        Pow(Base* l, Base* r) : Base() {lhs = l; rhs = r; }
         virtual double evaluate() {
-		return pow(lhs->evaluate(), rhs->evaluate()) 
+		return pow(lhs->evaluate(), rhs->evaluate()); 
 	}       
 	 virtual std::string stringify() { return (lhs->stringify() + " ** " + rhs->stringify()); }
     private:
