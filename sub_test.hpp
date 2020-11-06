@@ -39,4 +39,28 @@ TEST(SubTest, SubMockStringifyDouble){
 
 
 
+TEST(SubTest, SubEvalNeg){
+	Op* negFive = new Op(-5);
+	Op* negFour = new Op(-4);
+	Sub* test = new Sub(negFive, negFour);
+	EXPECT_EQ(test->evaluate(), -1);
+}
+
+TEST(Subtest, SubEvalZero){
+	Op* zero = new Op(0);
+	Op* negOne = new Op(-1);
+	Sub *test = new Sub(zero, negOne);
+	EXPECT_EQ(test->evaluate(), 1);
+}
+
+TEST(Subtest, SubEvalDouble){
+        Op* three = new Op(3.4);
+        Op* four = new Op(4.6);
+        Sub *test = new Sub(three, four);
+        EXPECT_DOUBLE_EQ(test->evaluate(), -1.2);
+}
+
+
+
+
 #endif
