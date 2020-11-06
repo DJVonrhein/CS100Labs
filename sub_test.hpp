@@ -61,6 +61,27 @@ TEST(Subtest, SubEvalDouble){
 }
 
 
+TEST(SubTest, SubStringifyNeg){
+	Op* negFive = new Op(-5);
+	Op* negFour = new Op(-4);
+        Sub* test = new Sub(negFive, negFour);
+        EXPECT_EQ(test->stringify(), "-5.000000 - -4.000000");
+}
+
+TEST(Subtest, SubStringifyZero){
+        Op* zero = new Op(0);
+        Op* negOne = new Op(-1);
+        Sub *test = new Sub(zero, negOne);
+        EXPECT_EQ(test->stringify(), "0.000000 - -1.000000");
+}
+
+TEST(Subtest, SubStringifyDouble){
+        Op* three = new Op(3.4);
+        Op* four = new Op(4.6);
+        Sub *test = new Sub(three, four);
+        EXPECT_EQ(test->stringify(), "3.400000 - 4.600000");
+}
+
 
 
 #endif
